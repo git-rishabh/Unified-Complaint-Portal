@@ -29,7 +29,7 @@
     	// d.setTime(d.getTime() + (exdays*24*60*60*1000));
     	// var expires = "expires="+ d.toUTCString();
     	document.cookie = "username=" + cname;
-		//alert("setting cookie");
+		alert("setting cookie");
 	}
 
 	function fun(){
@@ -48,7 +48,6 @@
 			if(mail===objs[i].username && pass===objs[i].password){
 					window.location="index.html";
 					setCookie(mail);
-					return false;
 					//alert("jhhbh");
 					break;
 		
@@ -63,14 +62,13 @@
 
 		if(i===objs.length)
 		{
-				//alert("hey");
+				alert("hey");
 				var ur="https://snma.herokuapp.com/createUser?username="+mail+"&password="+pass;
 				
 				var req = new XMLHttpRequest();  
 	
 				req.open('GET', ur, false);   
 				req.send();
-				alert("Signup successful");	
 				setCookie(mail);
 						  
 		}
